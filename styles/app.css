@@ -1,17 +1,75 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
 .main {
     display: flex;
+    height: calc(100vh - 60px);
 }
 
 .aside {
-    flex-grow: 0.3;
+    flex-basis: 20%;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
 }
 
 .content {
-    flex-grow: 0.7;
+    flex-basis: 60%;
+    padding: 10px;
 }
-#listContainer{
-    height: 300px;
-    overflow: hidden;
-    overflow-y: scroll;
-    border: black 1px solid;
+
+.stats {
+    flex-basis: 20%;
+    border-left: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#listContainer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hoverable {
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    padding: 3px 5px;
+}
+
+.hoverable:hover {
+    background-color: #f0f0f0;
+}
+
+.tooltip {
+    font-size: 12px;
+    pointer-events: none;
+    position: absolute;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    opacity: 0;
+}
+
+.legend {
+    margin-bottom: 20px;
+}
+
+.legend .dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.legend .green { background-color: green; }
+.legend .red { background-color: red; }
+.legend .blue { background-color: blue; }
+
+#map svg {
+    width: 100%;
+    height: 100%;
 }

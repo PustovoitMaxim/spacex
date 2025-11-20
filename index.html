@@ -3,29 +3,35 @@
 <head>
     <title>Space X</title>
     <meta charset="UTF-8" />
-
     <script src="src/index.js" type="module"></script>
     <link href="styles/app.css" rel="stylesheet">
 </head>
 
 <body>
 <header>
-    <h1> SpaceX Stats</h1>
+    <h1>SpaceX Stats</h1>
 </header>
-    <main class="main">
-        <aside class="aside">
+
+<main class="main">
+    <aside class="aside" id="listContainer">
         <h3>Launches</h3>
-        <div id="listContainer">
+    </aside>
 
+    <div class="content">
+        <div id="map"></div>
+    </div>
+
+    <aside class="stats" id="launchStats">
+        <h3>Launch Details</h3>
+        <div class="legend">
+            <p><span class="dot green"></span> Успешные запуски</p>
+            <p><span class="dot red"></span> Неудачные запуски</p>
+            <p><span class="dot blue"></span> Статус неизвестен</p>
         </div>
-        </aside>
-        <content class="content">
-            <div id="map"> </div>
-        </content>
-    </main>
+        <div id="details"></div>
+    </aside>
+</main>
 
-<footer>
-
-</footer>
+<footer></footer>
 </body>
 </html>
